@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+
+group 'test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework:spring-core:3.2.13.RELEASE')
+    compile('org.springframework:spring-webmvc:3.2.13.RELEASE')
+    compile('org.springframework:spring-web:3.2.13.RELEASE')
+    compile('org.springframework:spring-tx:3.2.13.RELEASE')
+    compile('org.springframework:spring-orm:3.2.13.RELEASE')
+    compile('javax.servlet:javax.servlet-api:3.1.0')
+    compileOnly('org.projectlombok:lombok:1.18.4')
+    runtimeOnly('postgresql:postgresql:9.0-801.jdbc4')
+    compile('org.hibernate:hibernate-entitymanager:4.1.9.Final')
+    compile('javax.validation:validation-api:1.1.0.Final')
+
+    compile('commons-dbcp:commons-dbcp:1.2.2')
+    compile('log4j:log4j:1.2.17')
+
+}
